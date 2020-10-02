@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+void reverse(int num) 
+{ 
+    int  num_of_bits = sizeof(num) * 8; 
+    int  i, temp; 
+  
+    for (i = 0; i < num_of_bits; i++) 
+    { 
+        if(num & (1 << i)) 
+            temp |= (1 << ((num_of_bits - 1) - i)); 
+    } 
+   
+    printf("%u",temp);  
+} 
+  
+/* Driver function to test above function */
+int main() 
+{ 
+    unsigned int x = 3;  
+    reverse(x);
+    getchar(); 
+} 
