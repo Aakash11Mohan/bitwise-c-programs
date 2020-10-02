@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+  
+/* Driver function to test above function */
+int main() 
+{ 
+   int data;
+   int sign=0;
+   
+   scanf("%d",&data);
+   sign= (data>0)-(data<0);
+   
+   if(sign==1)
+   {
+       printf("Number is positive");
+   }
+   else if(sign==-1)
+   {
+       printf("Number is Negative");
+   }
+   else
+   {
+       printf("Number is Zero");
+   }
+}
