@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<stdbool.h>
+  
+/* Driver function to test above function */
+int main() 
+{ 
+   int data1,data2;
+   bool sign=0;
+   
+   scanf("%d",&data1);
+   scanf("%d",&data2);
+   sign=((data1 ^ data2)<0); //1 if same
+   
+   if(sign==true)
+   {
+       printf("Numbers have opposite sign");
+   }
+   else
+   {
+       printf("Numbers have same sign");
+   }
+}
