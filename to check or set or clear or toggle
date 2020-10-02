@@ -1,0 +1,52 @@
+#include<stdio.h>
+#include<stdbool.h>
+
+// Function to set the nth bit
+int setBit(int data, int n) 
+{ 
+    data|=(1<<n); 
+    printf("After bit Set: %d\n", data); 
+} 
+  
+// Function to clear the nth bit
+int clearBit(int data, int n) 
+{ 
+    data&=~(1<<n); 
+    printf("After bit clear: %d\n", data); 
+} 
+  
+// Function to toggle the nth bit 
+int toggleBit(int data, int n) 
+{ 
+    data^=(1<<n); 
+    printf("After bit toggle: %d\n", data); 
+} 
+
+// Function to check the nth bit
+int checkBit(int data,int n) 
+{ 
+    if(data & (1<<n)) 
+    {
+        printf("Bit is 1");
+    }
+    else
+    {
+        printf("Bit is 0");
+    }
+     
+} 
+
+int main() 
+{ 
+   int data,n;
+   
+   scanf("%d",&data);
+   scanf("%d",&n);
+   setBit(data,n);
+   clearBit(data,n);
+   toggleBit(data,n);
+   checkBit(data,n);
+   return 0; 
+
+    
+}
