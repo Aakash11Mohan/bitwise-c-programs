@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int num_of_bits=sizeof(int)*8;
+
+int rotate_left(int num,int n) 
+{ 
+    return ((num<<n) | (num>>(num_of_bits-n)));
+} 
+  
+int rotate_right(int num,int n) 
+{ 
+    return ((num>>n) | (num<<(num_of_bits-n)));
+} 
+
+
+/* Driver function to test above function */
+int main() 
+{ 
+    int x = 16; 
+    int n = 2;
+    printf("%d\n",rotate_left(x,n));
+    printf("%d\n",rotate_right(x,n));
+    getchar(); 
+} 
